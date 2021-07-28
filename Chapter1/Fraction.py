@@ -1,12 +1,14 @@
 class Fraction:
     
     # Fraction class from PythonDS 1.13
-    # negative fractions are represented with a negative numerator
+    # Originally negative fractions are represented with a negative numerator
+    # No changes needed for 1.17.6
     
     def __init__(self, top, bottom):
         
         #Integer check added due to Programming Exercises 1.17.5
         if isinstance(top, int) and isinstance(bottom, int):
+
             #Moved from __add__ function due to Programming Exercies 1.17.2
             common = gcd(top, bottom)
             
@@ -122,8 +124,10 @@ def gcd(m, n):
     return n
 
 
-x = Fraction(1,2)
+x = Fraction(1,-2)
 y = Fraction(2,3)
 print(x+y)
 print(x == y)
+print(x / y)
+print(x * y)
 

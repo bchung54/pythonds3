@@ -161,6 +161,7 @@ class XorGate(BinaryGate):
         else:
             return 0
 
+#Programming Exercises 1.17.11
 def half_adder():
     g_xor = XorGate("half_adder_xor")
     g_and = AndGate("half_adder_and")
